@@ -1,7 +1,27 @@
 aid: palette-2
 name: Palette 2
-description: Palette 2 is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Palette is AI-native media infrastructure and a multimodal creative platform
+  from Y Combinator's Summer 2026 batch. It turns a single source of truth — a
+  manual, brief, or document — into localized checklists, precise diagrams,
+  images, music, and cinematic video tailored to every audience. Palette routes
+  requests across leading generative models (ByteDance Seedance, Google Veo,
+  Kling) inside a unified storyboard-to-final creative workflow, and exposes an
+  authenticated developer API at studio.palettetechnology.com for programmatic
+  generation and editing of multimedia content at scale.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://palettetechnology.com/media/hero-ink-poster.jpg
 url: https://raw.githubusercontent.com/api-evangelist/palette-2/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +31,64 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Generative AI
+- Video Generation
+- Media
+- Content Generation
+- Multimodal
+- Creative Tools
+apis:
+- name: Palette API
+  description: >-
+    Authenticated REST API for Palette's multimodal generation platform,
+    accessed with API keys managed in the Studio profile. The base path
+    /api/v1 is auth-gated (returns HTTP 401 without credentials). No public
+    OpenAPI or developer documentation was published at the time of profiling.
+  humanURL: https://studio.palettetechnology.com/
+  baseURL: https://studio.palettetechnology.com/api/v1
+  properties:
+  - type: Authentication
+    url: authentication/palette-2-authentication.yml
+  - type: LLMsTxt
+    url: llms/palette-2-llms.txt
+common:
+- type: Website
+  url: https://palettetechnology.com/
+- type: DeveloperPortal
+  url: https://studio.palettetechnology.com/
+- type: SignUp
+  url: https://studio.palettetechnology.com/
+- type: Security
+  url: https://palettetechnology.com/security
+- type: PrivacyPolicy
+  url: https://palettetechnology.com/privacy
+- type: TermsOfService
+  url: https://palettetechnology.com/terms
+- type: ResponsibleAI
+  url: https://palettetechnology.com/responsible-ai
+- type: DataProcessingAgreement
+  url: https://palettetechnology.com/dpa
+- type: Subprocessors
+  url: https://palettetechnology.com/subprocessors
+- type: LLMsTxt
+  url: llms/palette-2-llms.txt
+- type: Authentication
+  url: authentication/palette-2-authentication.yml
+- type: VulnerabilityDisclosure
+  url: security/palette-2-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/palette-2-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

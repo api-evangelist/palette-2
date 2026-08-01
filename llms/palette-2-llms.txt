@@ -1,0 +1,14 @@
+# Palette
+
+> Palette is AI-native media infrastructure. Turn a single source manual into localized checklists, exact diagrams, and precise video, tailored to every audience, from one source of truth.
+
+This file is generated from the site's source content. It is a curated index for AI assistants, not a crawler permissions file. For crawler permissions, see `/robots.txt`.
+
+## Core Pages
+
+- [Home](https://palettetechnology.com/): Primary overview of the site.
+
+## Discovery
+
+- [Sitemap](https://palettetechnology.com/sitemap-index.xml): Complete search-engine sitemap, if available.
+- [Robots policy](https://palettetechnology.com/robots.txt): Crawler permissions for automated agents.

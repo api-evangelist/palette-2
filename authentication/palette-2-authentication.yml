@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://palettetechnology.com/ (developer/API-key management), https://palettetechnology.com/security, live probe of https://studio.palettetechnology.com/api/v1
+summary:
+  types:
+  - apiKey
+  - openIdConnect
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  description: >-
+    Palette's developer API is accessed with an API key generated and managed
+    from the Studio profile (https://studio.palettetechnology.com/profile).
+    Requests to the base path https://studio.palettetechnology.com/api/v1
+    return HTTP 401 when unauthenticated, confirming API-key-gated access. The
+    exact header name and prefix were not published in developer docs at the
+    time of profiling.
+  sources:
+  - https://palettetechnology.com/
+  - probe:https://studio.palettetechnology.com/api/v1
+- name: sso
+  type: openIdConnect
+  description: >-
+    The Palette application supports enterprise single sign-on via SAML and
+    OIDC with MFA, per the published security page. This governs interactive
+    user access to the Studio; programmatic API access uses API keys.
+  sources:
+  - https://palettetechnology.com/security
+notes:
+- No public OpenAPI or developer reference was available; auth profile is
+  derived from the marketing/security pages and a live 401 probe of the API
+  base path, not from a machine-readable specification.
