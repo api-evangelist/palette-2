@@ -9,6 +9,17 @@ description: >-
   Kling) inside a unified storyboard-to-final creative workflow, and exposes an
   authenticated developer API at studio.palettetechnology.com for programmatic
   generation and editing of multimedia content at scale.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
