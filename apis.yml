@@ -22,15 +22,17 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  - {url: 'https://palettetechnology.com/', status: 301, note: 'declared website redirects to https://palettelabs.com/ — a different registrable domain (palettetechnology.com -> palettelabs.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  generated: '2026-09-03'
   method: derived
 image: https://palettetechnology.com/media/hero-ink-poster.jpg
 url: https://raw.githubusercontent.com/api-evangelist/palette-2/refs/heads/main/apis.yml
